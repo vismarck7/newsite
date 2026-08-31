@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 | 충동</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body>
+
+<!-- ============ 로그인 화면 ============ -->
+<div id="admin-login" class="admin-login">
+  <div class="admin-login__box">
+    <div class="admin-login__brand">충동 <span>관리자</span></div>
+    <div class="admin-login__notice">
+      ⚠️ 이 화면은 <strong>정적 사이트용 CMS-lite 데모</strong>이며, 실제 보안 인증 시스템이 아닙니다.<br>
+      비밀번호는 브라우저에서만 확인되며, 서버로 전송되거나 실제 계정을 보호하지 않습니다.
+    </div>
+    <form id="login-form">
+      <div class="form-field">
+        <label for="login-password">데모 비밀번호</label>
+        <input type="password" id="login-password" placeholder="chungdong2026" autocomplete="off">
+        <p class="admin-hint">데모 비밀번호: <code>chungdong2026</code> (화면에 공개되어 있습니다)</p>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block">비밀번호로 로그인</button>
+    </form>
+    <div class="admin-login__divider">또는</div>
+    <button id="demo-login-btn" class="btn btn--secondary btn--block">데모 계정으로 바로 체험하기</button>
+    <p class="admin-hint" style="margin-top:18px;text-align:center;">
+      <a href="/">← 사이트로 돌아가기</a>
+    </p>
+  </div>
+</div>
+
+<!-- ============ 관리자 앱 ============ -->
+<div id="admin-app" class="admin-app" hidden>
+  <header class="admin-topbar">
+    <div class="admin-topbar__brand">충동 <span>관리자</span></div>
+    <div class="admin-topbar__actions">
+      <a href="/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">사이트 보기 ↗</a>
+      <button id="logout-btn" class="btn btn--ghost btn--sm">로그아웃</button>
+    </div>
+  </header>
+
+  <div class="admin-body">
+    <nav class="admin-sidebar" aria-label="관리자 메뉴">
+      <ul>
+        <li><a href="#/dashboard" data-route="dashboard">📊 대시보드</a></li>
+        <li><a href="#/posts" data-route="posts">📝 일반 글 관리</a></li>
+        <li><a href="#/columns" data-route="columns">🖋 칼럼 관리</a></li>
+        <li><a href="#/categories" data-route="categories">🗂 카테고리</a></li>
+        <li><a href="#/settings" data-route="settings">⚙️ 사이트 설정</a></li>
+      </ul>
+      <div class="admin-sidebar__footer">
+        <p>이 관리자 모드는 브라우저 저장소(localStorage) 기반 데모입니다. 기기·브라우저가 바뀌면 데이터가 유지되지 않을 수 있습니다.</p>
+      </div>
+    </nav>
+
+    <main id="admin-main" class="admin-main"></main>
+  </div>
+</div>
+
+<!-- 미리보기 모달 -->
+<div id="preview-modal" class="admin-modal" hidden>
+  <div class="admin-modal__box">
+    <div class="admin-modal__head">
+      <strong>미리보기</strong>
+      <button id="preview-close" class="btn btn--ghost btn--sm">닫기 ✕</button>
+    </div>
+    <div id="preview-content" class="admin-modal__body"></div>
+  </div>
+</div>
+
+<script src="/data/site.config.js"></script>
+<script src="/data/categories.js"></script>
+<script src="/data/posts.js"></script>
+<script src="/data/columns.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/admin.js"></script>
+</body>
+</html>

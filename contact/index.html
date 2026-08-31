@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>문의하기 | 충동</title>
+<meta name="description" content="충동에 다루었으면 하는 주제나 책을 제안하거나, 사이트에 대한 의견을 이메일로 보내주세요.">
+<link rel="canonical" href="https://www.chungdong.kr/contact/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="문의하기 | 충동">
+<meta property="og:description" content="충동 운영자에게 이메일로 문의하는 방법을 안내합니다.">
+<meta property="og:url" content="https://www.chungdong.kr/contact/">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-nav="contact">
+<a class="skip-link" href="#main">본문 바로가기</a>
+<header id="site-header" class="site-header"></header>
+
+<nav class="breadcrumb" aria-label="브레드크럼">
+  <ol>
+    <li><a href="/">홈</a></li>
+    <li aria-current="page">문의하기</li>
+  </ol>
+</nav>
+
+<main id="main">
+<div class="content-page">
+  <h1>문의하기</h1>
+  <p class="content-page__lead">다루었으면 하는 책이나 주제 제안, 오탈자 제보, 그 밖의 의견까지 편하게 알려주세요.</p>
+
+  <div class="notice-box">
+    이 사이트는 별도의 서버 없이 정적으로 운영되고 있어, 아래 문의 폼은 자동으로 메일을 전송하지 않습니다.
+    "메일 작성하기" 버튼을 누르면 <strong>사용하시는 기기의 이메일 앱(메일 클라이언트)이 열리며</strong>, 입력하신 내용이 담긴 메일을 직접 검토 후 보내실 수 있습니다.
+    이메일 앱이 연결되지 않는다면 <a href="mailto:maestro_mj@naver.com">maestro_mj@naver.com</a>으로 직접 메일을 보내주셔도 됩니다.
+  </div>
+
+  <div class="contact-grid">
+    <div>
+      <form id="contact-form">
+        <div class="form-field">
+          <label for="c-name">이름 또는 닉네임</label>
+          <input type="text" id="c-name" name="name" placeholder="예: 홍길동" required>
+        </div>
+        <div class="form-field">
+          <label for="c-email">회신 받을 이메일 주소</label>
+          <input type="email" id="c-email" name="email" placeholder="example@email.com" required>
+        </div>
+        <div class="form-field">
+          <label for="c-subject">문의 유형</label>
+          <select id="c-subject" name="subject">
+            <option value="주제/책 제안">다루었으면 하는 책·주제 제안</option>
+            <option value="오탈자/오류 제보">오탈자 또는 오류 제보</option>
+            <option value="협업 문의">협업·제휴 문의</option>
+            <option value="기타 의견">기타 의견</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="c-message">내용</label>
+          <textarea id="c-message" name="message" placeholder="전하고 싶은 내용을 자유롭게 적어주세요." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">메일 작성하기</button>
+      </form>
+    </div>
+    <div>
+      <h2 class="mt-0">이메일로 바로 연락하기</h2>
+      <p>폼을 이용하지 않고 바로 메일을 보내고 싶다면 아래 이메일로 연락해주세요.</p>
+      <p style="font-size:1.1rem;"><a href="mailto:maestro_mj@naver.com">maestro_mj@naver.com</a></p>
+      <h2>답변은 언제쯤 받을 수 있나요</h2>
+      <p>1인이 운영하는 사이트 특성상 답변까지 며칠 정도 소요될 수 있는 점 양해 부탁드립니다. 순서대로 확인 후 회신드리겠습니다.</p>
+      <h2>어떤 문의를 환영하나요</h2>
+      <ul>
+        <li>다루었으면 하는 책이나 주제 제안</li>
+        <li>글의 오탈자나 잘못된 정보 제보</li>
+        <li>사이트 이용 중 느낀 불편한 점</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/data/site.config.js"></script>
+<script src="/data/categories.js"></script>
+<script src="/assets/js/common.js"></script>
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = document.getElementById("c-name").value;
+    var email = document.getElementById("c-email").value;
+    var subject = document.getElementById("c-subject").value;
+    var message = document.getElementById("c-message").value;
+    var body = "이름/닉네임: " + name + "\\n회신 이메일: " + email + "\\n\\n" + message;
+    var mailto = "mailto:maestro_mj@naver.com" +
+      "?subject=" + encodeURIComponent("[충동 문의] " + subject) +
+      "&body=" + encodeURIComponent(body);
+    window.location.href = mailto;
+  });
+</script>
+</body>
+</html>

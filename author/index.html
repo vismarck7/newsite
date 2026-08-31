@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>운영자 소개 | 이지원 | 충동</title>
+<meta name="description" content="충동을 운영하는 이지원을 소개합니다. 사이트 운영 목적과 편집 원칙, 그리고 운영자가 쓴 칼럼과 최신 글을 함께 확인할 수 있습니다.">
+<link rel="canonical" href="https://www.chungdong.kr/author/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="운영자 소개 | 이지원 | 충동">
+<meta property="og:description" content="충동을 운영하는 이지원의 소개와 편집 원칙, 칼럼을 확인하세요.">
+<meta property="og:url" content="https://www.chungdong.kr/author/">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "이지원",
+    "jobTitle": "콘텐츠 에디터 · 운영자",
+    "description": "십여 년간 책을 읽고 기록해 온 콘텐츠 에디터로, 서평과 신간 정보, 글쓰기에 관한 정보를 정리해 전달하고 있습니다.",
+    "url": "https://www.chungdong.kr/author/"
+  }
+}
+</script>
+</head>
+<body data-nav="author">
+<a class="skip-link" href="#main">본문 바로가기</a>
+<header id="site-header" class="site-header"></header>
+
+<nav class="breadcrumb" aria-label="브레드크럼">
+  <ol>
+    <li><a href="/">홈</a></li>
+    <li aria-current="page">운영자 소개</li>
+  </ol>
+</nav>
+
+<main id="main">
+<div class="category-hero">
+  <div class="container" style="max-width:var(--content-width)">
+    <h1>운영자 소개</h1>
+    <p>충동을 만들고 운영하는 이지원을 소개합니다.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container" style="max-width:var(--content-width)">
+
+    <!-- 관리자 세션에 따라 분기되는 배너: assets/js/author.js 에서 렌더링 -->
+    <div id="session-banner-mount"></div>
+
+    <div class="editor-box" style="margin-bottom:34px;">
+      <div class="editor-box__avatar" aria-hidden="true">이</div>
+      <div>
+        <h3 style="font-size:1.2rem;">이지원</h3>
+        <span class="role">콘텐츠 에디터 · 운영자</span>
+        <p style="font-size:0.95rem;">십여 년간 다양한 장르의 책을 꾸준히 읽고 기록해 온 콘텐츠 에디터입니다. 개인적으로 서평을 남기던 것을 시작으로, 신간 정보를 정리하고 글쓰기 방법을 안내하는 콘텐츠를 만들어 왔습니다. 충동에서는 화려한 수식어보다 실제로 도움이 되는 정보를 전달하는 데 중점을 두고 있으며, 모든 글은 실제로 읽고 정리한 내용을 바탕으로 작성합니다.</p>
+        <div class="editor-box__actions">
+          <a class="btn btn--secondary btn--sm" href="mailto:maestro_mj@naver.com">이메일로 문의하기</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="font-family:var(--font-serif);color:var(--color-main-dark);">운영 원칙</h2>
+    <div class="principles" style="margin-bottom:36px;">
+      <div class="principle-card">
+        <h3>직접 확인한 정보만</h3>
+        <p>실제로 읽거나 검토한 내용을 바탕으로 글을 작성하며, 확인되지 않은 수치나 순위는 다루지 않습니다.</p>
+      </div>
+      <div class="principle-card">
+        <h3>과장 없는 문장</h3>
+        <p>자극적인 표현보다 있는 그대로의 정보를 전달하는 문체를 지향합니다.</p>
+      </div>
+      <div class="principle-card">
+        <h3>꾸준한 점검과 보완</h3>
+        <p>한 번 발행한 글도 시간이 지나면 다시 점검하고, 필요한 경우 내용을 보완해 최신 상태로 유지합니다.</p>
+      </div>
+    </div>
+
+    <h2 style="font-family:var(--font-serif);color:var(--color-main-dark);">칼럼</h2>
+    <p style="color:var(--color-text-soft);font-size:0.92rem;margin-bottom:16px;">일반 정보 글과 별도로, 운영자의 시선이 담긴 칼럼입니다.</p>
+    <div class="column-strip" id="author-columns" style="margin-bottom:36px;"></div>
+
+    <h2 style="font-family:var(--font-serif);color:var(--color-main-dark);">운영자가 최근 작성한 글</h2>
+    <div class="post-grid" id="author-latest-posts" style="margin-bottom:20px;"></div>
+
+  </div>
+</section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/data/site.config.js"></script>
+<script src="/data/categories.js"></script>
+<script src="/data/posts.js"></script>
+<script src="/data/columns.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/render.js"></script>
+<script src="/assets/js/author.js"></script>
+</body>
+</html>

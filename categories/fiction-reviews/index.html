@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>소설 서평 | 충동</title>
+<meta name="description" content="장편 소설, 단편집, 미스터리 등 다양한 소설을 읽고 서평을 쓰는 방법을 다루는 카테고리입니다. 이야기를 고르는 안목과 감상을 정리하는 요령을 소개합니다.">
+<link rel="canonical" href="https://www.chungdong.kr/categories/fiction-reviews/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="소설 서평 | 충동">
+<meta property="og:description" content="장편 소설, 단편집, 미스터리 등 다양한 소설을 읽고 서평을 쓰는 방법을 다루는 카테고리입니다. 이야기를 고르는 안목과 감상을 정리하는 요령을 소개합니다.">
+<meta property="og:url" content="https://www.chungdong.kr/categories/fiction-reviews/">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.chungdong.kr/"},
+    {"@type":"ListItem","position":2,"name":"카테고리","item":"https://www.chungdong.kr/categories/"},
+    {"@type":"ListItem","position":3,"name":"소설 서평","item":"https://www.chungdong.kr/categories/fiction-reviews/"}
+  ]
+}
+</script>
+</head>
+<body data-nav="categories">
+<a class="skip-link" href="#main">본문 바로가기</a>
+<header id="site-header" class="site-header"></header>
+
+<nav class="breadcrumb" aria-label="브레드크럼">
+  <ol>
+    <li><a href="/">홈</a></li>
+    <li><a href="/categories/">카테고리</a></li>
+    <li aria-current="page">소설 서평</li>
+  </ol>
+</nav>
+
+<main id="main">
+<div class="category-hero">
+  <div class="container">
+    <h1>소설 서평</h1>
+    <p>소설은 장르와 형식에 따라 읽는 재미도, 서평을 쓰는 방식도 달라집니다. 이 카테고리에서는 몰입감 있는 장편을 고르는 법부터 단편집 서평 쓰는 법, 스포일러 없이 미스터리 소설의 감상을 전하는 방법까지 다룹니다.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="post-grid post-grid--3" id="category-posts"></div>
+  </div>
+</section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/data/site.config.js"></script>
+<script src="/data/categories.js"></script>
+<script src="/data/posts.js"></script>
+<script src="/data/columns.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/render.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.ChungdongRender.renderInto("category-posts", window.ChungdongRender.postsByCategory("fiction-reviews"), window.ChungdongRender.postCardHTML);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신간 소식 | 충동</title>
+<meta name="description" content="매달 쏟아지는 신간 중 어떤 책을 먼저 살펴볼지 고민하는 분들을 위한 카테고리입니다. 신간을 고르는 기준과 정보를 확인하는 방법을 다룹니다.">
+<link rel="canonical" href="https://www.chungdong.kr/categories/new-releases/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="신간 소식 | 충동">
+<meta property="og:description" content="신간을 고르고 확인하는 실용적인 정보를 정리한 카테고리입니다.">
+<meta property="og:url" content="https://www.chungdong.kr/categories/new-releases/">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"홈","item":"https://www.chungdong.kr/"},
+    {"@type":"ListItem","position":2,"name":"카테고리","item":"https://www.chungdong.kr/categories/"},
+    {"@type":"ListItem","position":3,"name":"신간 소식","item":"https://www.chungdong.kr/categories/new-releases/"}
+  ]
+}
+</script>
+</head>
+<body data-nav="categories">
+<a class="skip-link" href="#main">본문 바로가기</a>
+<header id="site-header" class="site-header"></header>
+
+<nav class="breadcrumb" aria-label="브레드크럼">
+  <ol>
+    <li><a href="/">홈</a></li>
+    <li><a href="/categories/">카테고리</a></li>
+    <li aria-current="page">신간 소식</li>
+  </ol>
+</nav>
+
+<main id="main">
+<div class="category-hero">
+  <div class="container">
+    <h1>신간 소식</h1>
+    <p>서점 매대와 온라인 서점에는 매달 수백 권의 신간이 쏟아집니다. 이 카테고리에서는 신간을 무작정 다 읽으려 하기보다, 나에게 맞는 신간을 고르는 기준과 신간 정보를 놓치지 않고 확인하는 방법을 다룹니다. 번역서와 국내 창작 신간을 비교하는 관점도 함께 소개합니다.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="post-grid post-grid--3" id="category-posts"></div>
+  </div>
+</section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script src="/data/site.config.js"></script>
+<script src="/data/categories.js"></script>
+<script src="/data/posts.js"></script>
+<script src="/data/columns.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/render.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.ChungdongRender.renderInto("category-posts", window.ChungdongRender.postsByCategory("new-releases"), window.ChungdongRender.postCardHTML);
+  });
+</script>
+</body>
+</html>
