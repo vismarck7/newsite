@@ -10,7 +10,7 @@ window.SITE_CONFIG = {
   tagline: "책을 읽고, 쓰고 싶어지는 순간을 기록합니다",
   description:
     "충동은 서평과 신간 소식, 글쓰기에 관한 실용적인 정보를 다루는 정보형 콘텐츠 사이트입니다. 책을 즐겨 읽는 사람과 글쓰기를 시작하려는 입문자를 위해 과장 없는 정보를 전합니다.",
-  url: "https://www.chungdong.kr",
+  url: "https://www.choongdong.kr",
   ownerName: "이지원",
   ownerRole: "콘텐츠 에디터 · 운영자",
   ownerBio:

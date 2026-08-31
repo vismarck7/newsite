@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://www.chungdong.kr/sitemap.xml
+Sitemap: https://www.choongdong.kr/sitemap.xml

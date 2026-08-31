@@ -44,7 +44,7 @@ npx serve .
 > 버튼 자체는 여전히 동작하며, 실제 도메인이 연결되면 이 문제도 사라집니다.)
 
 `canonical`, Open Graph `url`, JSON-LD의 `url` 필드는 SEO 목적상 항상 실제 도메인
-(`https://www.chungdong.kr/...`)의 전체 절대 URL을 사용합니다. 실제 도메인이 정해지면
+(`https://www.choongdong.kr/...`)의 전체 절대 URL을 사용합니다. 실제 도메인이 정해지면
 이 값들을 실제 도메인으로 일괄 교체해주세요(`data/site.config.js`의 `url` 값과 각
 HTML의 `canonical`/`og:url`/JSON-LD `url` 필드).
 
