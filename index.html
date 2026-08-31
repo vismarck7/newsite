@@ -18,8 +18,8 @@
 <meta name="twitter:title" content="충동 | 서평·신간·글쓰기 정보 사이트">
 <meta name="twitter:description" content="책을 읽고, 쓰고 싶어지는 순간을 기록하는 정보 사이트.">
 
-<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,8 +50,8 @@
       <h1>책을 읽고, 쓰고 싶어지는<br>순간을 기록합니다</h1>
       <p><strong>충동</strong>은 서평과 신간 소식, 글쓰기에 관한 실용적인 정보를 정리해 전하는 정보 사이트입니다. 책을 즐겨 읽는 분들과, 서평이나 감상문을 처음 써보려는 입문자를 위한 콘텐츠를 다룹니다.</p>
       <div class="hero__actions">
-        <a class="btn btn--primary" href="/categories/">카테고리 둘러보기</a>
-        <a class="btn btn--secondary" href="/about/">사이트 소개 보기</a>
+        <a class="btn btn--primary" href="categories/">카테고리 둘러보기</a>
+        <a class="btn btn--secondary" href="about/">사이트 소개 보기</a>
       </div>
     </div>
     <div class="hero__panel">
@@ -73,7 +73,7 @@
         <h2>대표 카테고리</h2>
         <p>주제별로 정리된 카테고리에서 필요한 정보를 바로 찾아보세요.</p>
       </div>
-      <a class="section__link" href="/categories/">전체 카테고리 보기 →</a>
+      <a class="section__link" href="categories/">전체 카테고리 보기 →</a>
     </div>
     <div class="category-grid category-grid--5" id="home-categories"></div>
   </div>
@@ -86,7 +86,7 @@
         <h2>최신 글</h2>
         <p>가장 최근에 발행되거나 업데이트된 글입니다.</p>
       </div>
-      <a class="section__link" href="/sitemap/">전체 글 목록 →</a>
+      <a class="section__link" href="sitemap/">전체 글 목록 →</a>
     </div>
     <div class="post-grid post-grid--3" id="home-latest"></div>
   </div>
@@ -144,12 +144,12 @@
     <div class="editor-box">
       <div class="editor-box__avatar" aria-hidden="true">이</div>
       <div>
-        <h3><a href="/author/">이지원</a></h3>
+        <h3><a href="author/">이지원</a></h3>
         <span class="role">콘텐츠 에디터 · 운영자</span>
         <p>십여 년간 책을 읽고 기록해 온 콘텐츠 에디터로, 서평과 글쓰기에 관한 정보를 정리해 전달하는 일을 하고 있습니다.</p>
         <div class="editor-box__actions">
-          <a class="btn btn--secondary btn--sm" href="/author/">운영자 소개 보기</a>
-          <a class="btn btn--ghost btn--sm" href="/columns/">칼럼 모아보기</a>
+          <a class="btn btn--secondary btn--sm" href="author/">운영자 소개 보기</a>
+          <a class="btn btn--ghost btn--sm" href="columns/">칼럼 모아보기</a>
         </div>
       </div>
     </div>
@@ -163,7 +163,7 @@
         <h2>운영자 칼럼</h2>
         <p>정보 글과 별도로, 운영자의 시선이 담긴 짧은 글입니다.</p>
       </div>
-      <a class="section__link" href="/columns/">칼럼 전체 보기 →</a>
+      <a class="section__link" href="columns/">칼럼 전체 보기 →</a>
     </div>
     <div class="column-strip" id="home-columns"></div>
   </div>
@@ -174,7 +174,7 @@
     <div class="cta-band">
       <h2>궁금한 점이나 제안하고 싶은 주제가 있나요?</h2>
       <p>다루었으면 하는 책이나 주제가 있다면 이메일로 편하게 알려주세요.</p>
-      <a class="btn btn--accent" href="/contact/">문의하기</a>
+      <a class="btn btn--accent" href="contact/">문의하기</a>
     </div>
   </div>
 </section>
@@ -183,12 +183,13 @@
 
 <footer id="site-footer" class="site-footer"></footer>
 
-<script src="/data/site.config.js"></script>
-<script src="/data/categories.js"></script>
-<script src="/data/posts.js"></script>
-<script src="/data/columns.js"></script>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/render.js"></script>
+<script src="data/site.config.js"></script>
+<script src="data/categories.js"></script>
+<script src="data/posts.js"></script>
+<script src="data/columns.js"></script>
+<script>window.SITE_BASE = "";</script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/render.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var R = window.ChungdongRender;

@@ -11,8 +11,8 @@
 <meta property="og:title" content="문의하기 | 충동">
 <meta property="og:description" content="충동 운영자에게 이메일로 문의하는 방법을 안내합니다.">
 <meta property="og:url" content="https://www.chungdong.kr/contact/">
-<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-nav="contact">
 <a class="skip-link" href="#main">본문 바로가기</a>
@@ -20,7 +20,7 @@
 
 <nav class="breadcrumb" aria-label="브레드크럼">
   <ol>
-    <li><a href="/">홈</a></li>
+    <li><a href="../">홈</a></li>
     <li aria-current="page">문의하기</li>
   </ol>
 </nav>
@@ -33,7 +33,7 @@
   <div class="notice-box">
     이 사이트는 별도의 서버 없이 정적으로 운영되고 있어, 아래 문의 폼은 자동으로 메일을 전송하지 않습니다.
     "메일 작성하기" 버튼을 누르면 <strong>사용하시는 기기의 이메일 앱(메일 클라이언트)이 열리며</strong>, 입력하신 내용이 담긴 메일을 직접 검토 후 보내실 수 있습니다.
-    이메일 앱이 연결되지 않는다면 <a href="mailto:maestro_mj@naver.com">maestro_mj@naver.com</a>으로 직접 메일을 보내주셔도 됩니다.
+    이메일 앱이 연결되지 않는다면 <a href="mailto:vismarcklee@gmail.com">vismarcklee@gmail.com</a>으로 직접 메일을 보내주셔도 됩니다.
   </div>
 
   <div class="contact-grid">
@@ -66,7 +66,7 @@
     <div>
       <h2 class="mt-0">이메일로 바로 연락하기</h2>
       <p>폼을 이용하지 않고 바로 메일을 보내고 싶다면 아래 이메일로 연락해주세요.</p>
-      <p style="font-size:1.1rem;"><a href="mailto:maestro_mj@naver.com">maestro_mj@naver.com</a></p>
+      <p style="font-size:1.1rem;"><a href="mailto:vismarcklee@gmail.com">vismarcklee@gmail.com</a></p>
       <h2>답변은 언제쯤 받을 수 있나요</h2>
       <p>1인이 운영하는 사이트 특성상 답변까지 며칠 정도 소요될 수 있는 점 양해 부탁드립니다. 순서대로 확인 후 회신드리겠습니다.</p>
       <h2>어떤 문의를 환영하나요</h2>
@@ -82,9 +82,10 @@
 
 <footer id="site-footer" class="site-footer"></footer>
 
-<script src="/data/site.config.js"></script>
-<script src="/data/categories.js"></script>
-<script src="/assets/js/common.js"></script>
+<script src="../data/site.config.js"></script>
+<script src="../data/categories.js"></script>
+<script>window.SITE_BASE = "../";</script>
+<script src="../assets/js/common.js"></script>
 <script>
   document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -93,7 +94,7 @@
     var subject = document.getElementById("c-subject").value;
     var message = document.getElementById("c-message").value;
     var body = "이름/닉네임: " + name + "\\n회신 이메일: " + email + "\\n\\n" + message;
-    var mailto = "mailto:maestro_mj@naver.com" +
+    var mailto = "mailto:vismarcklee@gmail.com" +
       "?subject=" + encodeURIComponent("[충동 문의] " + subject) +
       "&body=" + encodeURIComponent(body);
     window.location.href = mailto;

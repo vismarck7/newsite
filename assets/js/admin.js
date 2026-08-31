@@ -497,7 +497,7 @@
           '<tr><td><input data-cat-field="name" data-idx="' + i + '" value="' + escapeHTML(c.name) + '" style="width:120px;"></td>' +
           "<td>" + c.slug + "</td>" +
           '<td class="wrap"><input data-cat-field="description" data-idx="' + i + '" value="' + escapeHTML(c.description) + '" style="width:100%;"></td>' +
-          '<td><a class="btn btn--ghost btn--sm" href="/categories/' + c.slug + '/" target="_blank">보기 ↗</a></td></tr>'
+          '<td><a class="btn btn--ghost btn--sm" href="' + window.Chungdong.url("categories/" + c.slug + "/") + '" target="_blank">보기 ↗</a></td></tr>'
         );
       }).join("") +
       "</tbody></table></div>" +

@@ -10,14 +10,26 @@
   var cfg = window.SITE_CONFIG || {};
   var categories = window.CATEGORIES || [];
 
-  // 루트 기준 절대경로를 사용하므로 하위 폴더 페이지에서도 링크가 깨지지 않습니다.
+  // ---------- 경로 도우미 ----------
+  // 각 HTML 파일은 로드 시 자신의 깊이에 맞는 window.SITE_BASE 값
+  // ("" | "../" | "../../" ...)을 미리 선언해둡니다. 이 함수는 그 값을 기준으로
+  // 사이트 루트 기준 상대경로 링크를 만들어, 사이트가 도메인 루트가 아니라
+  // 하위 경로(예: GitHub Pages의 /repo-name/)에 배포되어도 링크가 깨지지 않게 합니다.
+  var BASE = window.SITE_BASE || "";
+  function url(path) {
+    if (!path || path === "/") return BASE || "./";
+    return BASE + path;
+  }
+  window.Chungdong = window.Chungdong || {};
+  window.Chungdong.url = url;
+
   var NAV_ITEMS = [
-    { key: "home", label: "홈", href: "/" },
-    { key: "categories", label: "카테고리", href: "/categories/" },
-    { key: "columns", label: "칼럼", href: "/columns/" },
-    { key: "author", label: "운영자 소개", href: "/author/" },
-    { key: "about", label: "사이트 소개", href: "/about/" },
-    { key: "contact", label: "문의하기", href: "/contact/" },
+    { key: "home", label: "홈", path: "" },
+    { key: "categories", label: "카테고리", path: "categories/" },
+    { key: "columns", label: "칼럼", path: "columns/" },
+    { key: "author", label: "운영자 소개", path: "author/" },
+    { key: "about", label: "사이트 소개", path: "about/" },
+    { key: "contact", label: "문의하기", path: "contact/" },
   ];
 
   function renderHeader() {
@@ -29,7 +41,7 @@
       var isCurrent = item.key === current;
       return (
         '<li><a href="' +
-        item.href +
+        url(item.path) +
         '"' +
         (isCurrent ? ' aria-current="page"' : "") +
         ">" +
@@ -40,7 +52,7 @@
 
     mount.innerHTML =
       '<div class="site-header__inner">' +
-      '<a class="brand" href="/">' +
+      '<a class="brand" href="' + url("") + '">' +
       '<span class="brand__mark">' +
       (cfg.siteName || "충동") +
       "</span>" +
@@ -73,7 +85,7 @@
 
     var categoryLinks = categories
       .map(function (c) {
-        return '<li><a href="/categories/' + c.slug + '/">' + c.name + "</a></li>";
+        return '<li><a href="' + url("categories/" + c.slug + "/") + '">' + c.name + "</a></li>";
       })
       .join("");
 
@@ -87,7 +99,7 @@
       (cfg.description || "") +
       "</p>" +
       "<p>운영자 · " +
-      '<a href="/author/">' +
+      '<a href="' + url("author/") + '">' +
       (cfg.ownerName || "") +
       "</a><br>" +
       '문의 · <a href="mailto:' +
@@ -100,14 +112,14 @@
       categoryLinks +
       "</ul></div>" +
       "<div><h4>사이트 정보</h4><ul>" +
-      '<li><a href="/about/">사이트 소개</a></li>' +
-      '<li><a href="/author/">운영자 소개</a></li>' +
-      '<li><a href="/columns/">칼럼</a></li>' +
-      '<li><a href="/contact/">문의하기</a></li>' +
-      '<li><a href="/sitemap/">사이트맵</a></li>' +
-      '<li><a href="/privacy/">개인정보처리방침</a></li>' +
-      '<li><a href="/terms/">이용약관</a></li>' +
-      '<li><a href="/disclaimer/">면책고지</a></li>' +
+      '<li><a href="' + url("about/") + '">사이트 소개</a></li>' +
+      '<li><a href="' + url("author/") + '">운영자 소개</a></li>' +
+      '<li><a href="' + url("columns/") + '">칼럼</a></li>' +
+      '<li><a href="' + url("contact/") + '">문의하기</a></li>' +
+      '<li><a href="' + url("sitemap/") + '">사이트맵</a></li>' +
+      '<li><a href="' + url("privacy/") + '">개인정보처리방침</a></li>' +
+      '<li><a href="' + url("terms/") + '">이용약관</a></li>' +
+      '<li><a href="' + url("disclaimer/") + '">면책고지</a></li>' +
       "</ul></div>" +
       "</div>" +
       '<div class="site-footer__bottom">© ' +

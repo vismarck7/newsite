@@ -16,8 +16,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="몰입감 있는 장편 소설을 고르는 법 | 충동">
 <meta name="twitter:description" content="쉽게 몰입되는 장편 소설을 고르기 위해 표지 너머로 확인하면 좋은 정보들을 소개합니다.">
-<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,19 +72,19 @@
 
 <nav class="breadcrumb" aria-label="브레드크럼">
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/categories/fiction-reviews/">소설 서평</a></li>
+    <li><a href="../../">홈</a></li>
+    <li><a href="../../categories/fiction-reviews/">소설 서평</a></li>
     <li aria-current="page">몰입감 있는 장편 소설을 고르는 법</li>
   </ol>
 </nav>
 
 <main id="main">
 <div class="article-header">
-  <a class="article-header__category" href="/categories/fiction-reviews/">소설 서평</a>
+  <a class="article-header__category" href="../../categories/fiction-reviews/">소설 서평</a>
   <h1>몰입감 있는 장편 소설을 고르는 법</h1>
   <p class="article-header__lead">장편 소설은 완독까지 시간이 걸리는 만큼, 몰입감 있는 작품을 미리 가늠하는 기준이 있으면 도움이 됩니다.</p>
   <div class="article-meta">
-    <span>글쓴이 <strong><a href="/author/">이지원</a></strong></span>
+    <span>글쓴이 <strong><a href="../../author/">이지원</a></strong></span>
     <span>발행일 <strong>2026년 4월 10일</strong></span>
     <span>수정일 <strong>2026년 4월 10일</strong></span>
   </div>
@@ -147,12 +147,12 @@
   <div class="editor-box">
     <div class="editor-box__avatar" aria-hidden="true">이</div>
     <div>
-      <h3><a href="/author/">이지원</a></h3>
+      <h3><a href="../../author/">이지원</a></h3>
       <span class="role">콘텐츠 에디터 · 운영자</span>
       <p>십여 년간 책을 읽고 기록해 온 콘텐츠 에디터로, 서평과 신간 정보, 글쓰기에 관한 정보를 정리해 전달하고 있습니다.</p>
       <div class="editor-box__actions">
-        <a class="btn btn--secondary btn--sm" href="/author/">운영자 소개 보기</a>
-        <a class="btn btn--ghost btn--sm" href="/columns/">칼럼 보기</a>
+        <a class="btn btn--secondary btn--sm" href="../../author/">운영자 소개 보기</a>
+        <a class="btn btn--ghost btn--sm" href="../../columns/">칼럼 보기</a>
       </div>
     </div>
   </div>
@@ -167,19 +167,20 @@
 
 <footer id="site-footer" class="site-footer"></footer>
 
-<script src="/data/site.config.js"></script>
-<script src="/data/categories.js"></script>
-<script src="/data/posts.js"></script>
-<script src="/data/columns.js"></script>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/render.js"></script>
+<script>window.SITE_BASE = "../../";</script>
+<script src="../../data/site.config.js"></script>
+<script src="../../data/categories.js"></script>
+<script src="../../data/posts.js"></script>
+<script src="../../data/columns.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/render.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var related = window.ChungdongRender.relatedPosts("how-to-pick-immersive-novels", 3);
     var mount = document.getElementById("related-posts-list");
     if (related.length) {
       mount.innerHTML = related.map(function(p) {
-        return '<li><a href="/posts/' + p.slug + '/">' + p.title + '</a></li>';
+        return '<li><a href="' + window.Chungdong.url("posts/" + p.slug + "/") + '">' + p.title + '</a></li>';
       }).join("");
     } else {
       mount.parentElement.style.display = "none";

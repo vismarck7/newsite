@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>관리자 | 충동</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" href="/assets/css/admin.css">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/admin.css">
 </head>
 <body>
 
@@ -30,7 +30,7 @@
     <div class="admin-login__divider">또는</div>
     <button id="demo-login-btn" class="btn btn--secondary btn--block">데모 계정으로 바로 체험하기</button>
     <p class="admin-hint" style="margin-top:18px;text-align:center;">
-      <a href="/">← 사이트로 돌아가기</a>
+      <a href="../">← 사이트로 돌아가기</a>
     </p>
   </div>
 </div>
@@ -40,7 +40,7 @@
   <header class="admin-topbar">
     <div class="admin-topbar__brand">충동 <span>관리자</span></div>
     <div class="admin-topbar__actions">
-      <a href="/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">사이트 보기 ↗</a>
+      <a href="../" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">사이트 보기 ↗</a>
       <button id="logout-btn" class="btn btn--ghost btn--sm">로그아웃</button>
     </div>
   </header>
@@ -74,11 +74,12 @@
   </div>
 </div>
 
-<script src="/data/site.config.js"></script>
-<script src="/data/categories.js"></script>
-<script src="/data/posts.js"></script>
-<script src="/data/columns.js"></script>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/admin.js"></script>
+<script src="../data/site.config.js"></script>
+<script src="../data/categories.js"></script>
+<script src="../data/posts.js"></script>
+<script src="../data/columns.js"></script>
+<script>window.SITE_BASE = "../";</script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/admin.js"></script>
 </body>
 </html>

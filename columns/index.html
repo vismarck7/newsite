@@ -11,8 +11,8 @@
 <meta property="og:title" content="칼럼 | 충동">
 <meta property="og:description" content="운영자 이지원의 시선이 담긴 칼럼 모음입니다.">
 <meta property="og:url" content="https://www.chungdong.kr/columns/">
-<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body data-nav="columns">
 <a class="skip-link" href="#main">본문 바로가기</a>
@@ -20,7 +20,7 @@
 
 <nav class="breadcrumb" aria-label="브레드크럼">
   <ol>
-    <li><a href="/">홈</a></li>
+    <li><a href="../">홈</a></li>
     <li aria-current="page">칼럼</li>
   </ol>
 </nav>
@@ -29,7 +29,7 @@
 <div class="category-hero">
   <div class="container">
     <h1>칼럼</h1>
-    <p>일반 정보 글과 달리, 운영자 <a href="/author/">이지원</a>이 서평과 신간, 글쓰기에 대해 조금 더 개인적인 시선으로 남기는 글입니다. 최근 자주 받는 질문이나 요즘 눈에 띄는 흐름을 정리한 관점 글에 가깝습니다.</p>
+    <p>일반 정보 글과 달리, 운영자 <a href="../author/">이지원</a>이 서평과 신간, 글쓰기에 대해 조금 더 개인적인 시선으로 남기는 글입니다. 최근 자주 받는 질문이나 요즘 눈에 띄는 흐름을 정리한 관점 글에 가깝습니다.</p>
   </div>
 </div>
 
@@ -37,7 +37,7 @@
   <div class="container">
     <div class="column-strip" id="all-columns"></div>
     <p style="margin-top:28px;">
-      <a href="/author/">운영자 이지원 소개 보기 →</a>
+      <a href="../author/">운영자 이지원 소개 보기 →</a>
     </p>
   </div>
 </section>
@@ -45,12 +45,13 @@
 
 <footer id="site-footer" class="site-footer"></footer>
 
-<script src="/data/site.config.js"></script>
-<script src="/data/categories.js"></script>
-<script src="/data/posts.js"></script>
-<script src="/data/columns.js"></script>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/render.js"></script>
+<script src="../data/site.config.js"></script>
+<script src="../data/categories.js"></script>
+<script src="../data/posts.js"></script>
+<script src="../data/columns.js"></script>
+<script>window.SITE_BASE = "../";</script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/render.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     window.ChungdongRender.renderInto("all-columns", window.ChungdongRender.latestColumns(20), window.ChungdongRender.columnCardHTML);
