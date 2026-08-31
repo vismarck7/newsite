@@ -16,8 +16,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="추리·미스터리 소설, 스포일러 없이 서평 쓰는 법 | 충동">
 <meta name="twitter:description" content="반전이 핵심인 미스터리 소설은 서평을 쓸 때 특히 조심스럽습니다. 스포일러 없이 감상을 전하는 방법을 소개합니다.">
-<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,19 +96,19 @@
 
 <nav class="breadcrumb" aria-label="브레드크럼">
   <ol>
-    <li><a href="/">홈</a></li>
-    <li><a href="/categories/fiction-reviews/">소설 서평</a></li>
+    <li><a href="../../">홈</a></li>
+    <li><a href="../../categories/fiction-reviews/">소설 서평</a></li>
     <li aria-current="page">추리·미스터리 소설, 스포일러 없이 서평 쓰는 법</li>
   </ol>
 </nav>
 
 <main id="main">
 <div class="article-header">
-  <a class="article-header__category" href="/categories/fiction-reviews/">소설 서평</a>
+  <a class="article-header__category" href="../../categories/fiction-reviews/">소설 서평</a>
   <h1>추리·미스터리 소설, 스포일러 없이 서평 쓰는 법</h1>
   <p class="article-header__lead">미스터리 소설의 서평은 반전을 지키면서도 읽고 싶어지게 만드는 균형이 필요합니다.</p>
   <div class="article-meta">
-    <span>글쓴이 <strong><a href="/author/">이지원</a></strong></span>
+    <span>글쓴이 <strong><a href="../../author/">이지원</a></strong></span>
     <span>발행일 <strong>2026년 8월 25일</strong></span>
     <span>수정일 <strong>2026년 8월 25일</strong></span>
   </div>
@@ -179,12 +179,12 @@
   <div class="editor-box">
     <div class="editor-box__avatar" aria-hidden="true">이</div>
     <div>
-      <h3><a href="/author/">이지원</a></h3>
+      <h3><a href="../../author/">이지원</a></h3>
       <span class="role">콘텐츠 에디터 · 운영자</span>
       <p>십여 년간 책을 읽고 기록해 온 콘텐츠 에디터로, 서평과 신간 정보, 글쓰기에 관한 정보를 정리해 전달하고 있습니다.</p>
       <div class="editor-box__actions">
-        <a class="btn btn--secondary btn--sm" href="/author/">운영자 소개 보기</a>
-        <a class="btn btn--ghost btn--sm" href="/columns/">칼럼 보기</a>
+        <a class="btn btn--secondary btn--sm" href="../../author/">운영자 소개 보기</a>
+        <a class="btn btn--ghost btn--sm" href="../../columns/">칼럼 보기</a>
       </div>
     </div>
   </div>
@@ -199,19 +199,20 @@
 
 <footer id="site-footer" class="site-footer"></footer>
 
-<script src="/data/site.config.js"></script>
-<script src="/data/categories.js"></script>
-<script src="/data/posts.js"></script>
-<script src="/data/columns.js"></script>
-<script src="/assets/js/common.js"></script>
-<script src="/assets/js/render.js"></script>
+<script>window.SITE_BASE = "../../";</script>
+<script src="../../data/site.config.js"></script>
+<script src="../../data/categories.js"></script>
+<script src="../../data/posts.js"></script>
+<script src="../../data/columns.js"></script>
+<script src="../../assets/js/common.js"></script>
+<script src="../../assets/js/render.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var related = window.ChungdongRender.relatedPosts("mystery-review-basics", 3);
     var mount = document.getElementById("related-posts-list");
     if (related.length) {
       mount.innerHTML = related.map(function(p) {
-        return '<li><a href="/posts/' + p.slug + '/">' + p.title + '</a></li>';
+        return '<li><a href="' + window.Chungdong.url("posts/" + p.slug + "/") + '">' + p.title + '</a></li>';
       }).join("");
     } else {
       mount.parentElement.style.display = "none";

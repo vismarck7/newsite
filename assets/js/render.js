@@ -17,6 +17,7 @@
   function postCardHTML(post) {
     var catName = window.Chungdong.categoryName(post.category);
     var date = window.Chungdong.formatDate(post.modified || post.published);
+    var href = window.Chungdong.url("posts/" + post.slug + "/");
     return (
       '<article class="post-card">' +
       '<div class="post-card__meta"><span class="tag">' +
@@ -24,17 +25,17 @@
       "</span><span>" +
       date +
       " 업데이트</span></div>" +
-      "<h3><a href=\"/posts/" +
-      post.slug +
-      '/">' +
+      '<h3><a href="' +
+      href +
+      '">' +
       post.title +
       "</a></h3>" +
       "<p>" +
       post.excerpt +
       "</p>" +
-      '<a class="post-card__link" href="/posts/' +
-      post.slug +
-      '/">글 읽기 →</a>' +
+      '<a class="post-card__link" href="' +
+      href +
+      '">글 읽기 →</a>' +
       "</article>"
     );
   }
@@ -44,9 +45,9 @@
     return (
       '<article class="column-card">' +
       '<span class="tag">칼럼</span>' +
-      "<h3><a href=\"/columns/" +
-      col.slug +
-      '/">' +
+      '<h3><a href="' +
+      window.Chungdong.url("columns/" + col.slug + "/") +
+      '">' +
       col.title +
       "</a></h3>" +
       "<p>" +
@@ -63,9 +64,9 @@
 
   function categoryCardHTML(cat) {
     return (
-      '<a class="category-card" href="/categories/' +
-      cat.slug +
-      '/">' +
+      '<a class="category-card" href="' +
+      window.Chungdong.url("categories/" + cat.slug + "/") +
+      '">' +
       '<div class="category-card__icon" aria-hidden="true">📚</div>' +
       "<h3>" +
       cat.name +

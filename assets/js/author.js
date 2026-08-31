@@ -13,12 +13,12 @@
         bannerMount.innerHTML =
           '<div class="session-banner session-banner--admin">' +
           "<p><strong>관리자 세션이 활성화되어 있습니다.</strong> 새 칼럼을 바로 작성할 수 있습니다.</p>" +
-          '<a class="btn btn--accent btn--sm" href="/admin/#/columns/new">새 칼럼 작성하기</a>' +
+          '<a class="btn btn--accent btn--sm" href="' + window.Chungdong.url("admin/#/columns/new") + '">새 칼럼 작성하기</a>' +
           "</div>";
       } else {
         bannerMount.innerHTML =
           '<div class="session-banner session-banner--guest">' +
-          "<p>운영자가 정리한 칼럼을 읽어보세요. (관리자로 로그인하면 이 자리에 칼럼 작성 버튼이 표시됩니다 — <a href=\"/admin/\">관리자 데모 로그인</a>)</p>" +
+          "<p>운영자가 정리한 칼럼을 읽어보세요. (관리자로 로그인하면 이 자리에 칼럼 작성 버튼이 표시됩니다 — <a href=\"" + window.Chungdong.url("admin/") + "\">관리자 데모 로그인</a>)</p>" +
           "</div>";
       }
     }
