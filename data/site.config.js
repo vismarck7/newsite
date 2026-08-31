@@ -17,7 +17,7 @@ window.SITE_CONFIG = {
     "십여 년간 책을 읽고 기록해 온 콘텐츠 에디터로, 서평과 글쓰기에 관한 정보를 정리해 전달하는 일을 하고 있습니다.",
   ownerBioLong:
     "이지원은 다양한 장르의 책을 꾸준히 읽고 기록해 온 콘텐츠 에디터입니다. 개인 블로그에 서평을 남기던 것을 시작으로, 신간 정보를 정리하고 글쓰기 방법을 안내하는 콘텐츠를 만들어 왔습니다. '충동'에서는 화려한 수식어보다 실제로 도움이 되는 정보를 전달하는 데 중점을 두고 있으며, 모든 글은 실제로 읽고 정리한 내용을 바탕으로 작성합니다.",
-  contactEmail: "vismarcklee@naver.com",
+  contactEmail: "vismarcklee@gmail.com",
   mainColor: "#1E3A5F",
   subColor: "#C08552",
   foundedYear: 2025,
