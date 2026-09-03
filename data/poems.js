@@ -81,7 +81,7 @@ window.POEMS = [
     slug: "park-jun-maeum-hancheol",
     title: "마음 한철",
     poet: "박준",
-    poetYears: "1983~",
+    poetYears: "현재 활동 중",
     excerpt: "시집 『당신의 이름을 지어다가 며칠은 먹었다』에 수록된 작품으로, 마음에도 한 시절이 있다는 것을 담담한 어조로 그렸습니다. (저작권 보호 중, 짧은 구절만 인용)",
     published: "2026-09-03",
     modified: "2026-09-03",
