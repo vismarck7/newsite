@@ -1326,3 +1326,25 @@ ol {
   padding-top: 14px;
   margin-top: 1.8em;
 }
+
+.poem-excerpt {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.9;
+  white-space: pre-line;
+  border-left: 3px solid var(--color-sub);
+  padding: 18px 24px;
+  margin: 1.6em 0;
+  color: var(--color-text-soft);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-m);
+}
+
+.poem-excerpt cite {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+}
