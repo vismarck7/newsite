@@ -27,4 +27,12 @@ window.COLUMNS = [
     published: "2026-08-29",
     modified: "2026-08-29",
   },
+  {
+    slug: "authors-sns-as-reader-channel",
+    title: "작가의 SNS는 이제 가장 중요한 독자와의 소통 창구",
+    excerpt:
+      "신간 소식을 정리하다 보면 작가 개인 SNS가 독자와의 거리를 얼마나 좁혀놨는지 자주 느낍니다. 요즘 눈에 띄는 변화를 정리했습니다.",
+    published: "2026-09-03",
+    modified: "2026-09-03",
+  },
 ];

@@ -26,6 +26,7 @@
   var NAV_ITEMS = [
     { key: "home", label: "홈", path: "" },
     { key: "categories", label: "카테고리", path: "categories/" },
+    { key: "poems", label: "오늘의 시", path: "poems/" },
     { key: "columns", label: "칼럼", path: "columns/" },
     { key: "author", label: "운영자 소개", path: "author/" },
     { key: "about", label: "사이트 소개", path: "about/" },
@@ -114,6 +115,7 @@
       "<div><h4>사이트 정보</h4><ul>" +
       '<li><a href="' + url("about/") + '">사이트 소개</a></li>' +
       '<li><a href="' + url("author/") + '">운영자 소개</a></li>' +
+      '<li><a href="' + url("poems/") + '">오늘의 시</a></li>' +
       '<li><a href="' + url("columns/") + '">칼럼</a></li>' +
       '<li><a href="' + url("contact/") + '">문의하기</a></li>' +
       '<li><a href="' + url("sitemap/") + '">사이트맵</a></li>' +

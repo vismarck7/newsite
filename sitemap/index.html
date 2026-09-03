@@ -35,6 +35,7 @@
         <li><a href="../">홈</a></li>
         <li><a href="../about/">사이트 소개</a></li>
         <li><a href="../author/">운영자 소개</a></li>
+        <li><a href="../poems/">오늘의 시</a></li>
         <li><a href="../columns/">칼럼</a></li>
         <li><a href="../categories/">카테고리 전체</a></li>
         <li><a href="../contact/">문의하기</a></li>
@@ -50,6 +51,9 @@
 
       <h2>칼럼</h2>
       <ul id="sitemap-columns"></ul>
+
+      <h2>오늘의 시</h2>
+      <ul id="sitemap-poems"></ul>
     </div>
     <div id="sitemap-categories"></div>
   </div>
@@ -62,6 +66,7 @@
 <script src="../data/categories.js"></script>
 <script src="../data/posts.js"></script>
 <script src="../data/columns.js"></script>
+<script src="../data/poems.js"></script>
 <script>window.SITE_BASE = "../";</script>
 <script src="../assets/js/common.js"></script>
 <script>
@@ -80,6 +85,10 @@
 
     document.getElementById("sitemap-columns").innerHTML = window.COLUMNS.map(function (c) {
       return '<li><a href="' + window.Chungdong.url("columns/" + c.slug + "/") + '">' + c.title + '</a></li>';
+    }).join("");
+
+    document.getElementById("sitemap-poems").innerHTML = window.POEMS.map(function (p) {
+      return '<li><a href="' + window.Chungdong.url("poems/" + p.slug + "/") + '">' + p.title + ' - ' + p.poet + '</a></li>';
     }).join("");
   });
 </script>

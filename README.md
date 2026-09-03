@@ -60,7 +60,8 @@ HTML의 `canonical`/`og:url`/JSON-LD `url` 필드).
 /contact/                 문의하기 (이메일 기반)
 /categories/               카테고리 목록 + 5개 카테고리 상세
 /posts/{slug}/             글 상세 15개
-/columns/                  칼럼 목록 + 상세 3개
+/columns/                  칼럼 목록 + 상세 4개
+/poems/                    오늘의 시 목록 + 상세 10개
 /privacy/, /terms/, /disclaimer/   신뢰 페이지
 /sitemap/                  HTML 사이트맵
 /404.html
@@ -83,6 +84,7 @@ robots.txt, sitemap.xml
 | **카테고리 구조** | `data/categories.js` + `categories/{slug}/index.html` 페이지 추가/수정 |
 | **일반 글(포스트)** | 목록/카드 정보는 `data/posts.js`, 실제 본문은 `posts/{slug}/index.html` |
 | **칼럼** | 목록 정보는 `data/columns.js`, 실제 본문은 `columns/{slug}/index.html` |
+| **오늘의 시** | 목록 정보는 `data/poems.js`, 실제 본문은 `poems/{slug}/index.html` |
 | **관리자 기본 문구/데모 비밀번호** | `assets/js/admin.js` 상단 `DEMO_PASSWORD` 및 `admin/index.html` 안내 문구 |
 
 새 글을 추가하는 방법:
@@ -94,6 +96,11 @@ robots.txt, sitemap.xml
 3. 필요하다면 `sitemap.xml` 에도 새 URL을 추가합니다.
 
 칼럼도 동일한 방식으로 `data/columns.js` + `columns/{slug}/index.html` 을 추가하면 됩니다.
+
+**오늘의 시 저작권 원칙**: `data/poems.js`의 각 항목에는 `type` 필드가 있습니다.
+`"full"`은 시인 사후 70년이 지나 저작권이 만료된 공개서지 작품으로 전문을 싣고,
+`"intro"`는 아직 저작권이 살아있는 작품으로 전문 없이 시인 소개와 감상만 싣습니다.
+새 시를 추가할 때는 반드시 저작권 상태를 먼저 확인한 뒤 이 원칙에 따라 작성해주세요.
 
 ## 4. 관리자(CMS-lite) 데모에 대한 중요한 안내
 

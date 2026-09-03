@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 시 | 충동</title>
+<meta name="description" content="한국의 대표적인 시를 소개하는 오늘의 시 게시판입니다. 윤동주, 김소월, 한용운, 이육사부터 박준까지 다양한 시인의 작품을 만나보세요.">
+<link rel="canonical" href="https://www.choongdong.kr/poems/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="오늘의 시 | 충동">
+<meta property="og:description" content="한국의 대표적인 시를 소개하는 오늘의 시 게시판입니다.">
+<meta property="og:url" content="https://www.choongdong.kr/poems/">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5171521854565099"
+     crossorigin="anonymous"></script>
+</head>
+<body data-nav="poems">
+<a class="skip-link" href="#main">본문 바로가기</a>
+<header id="site-header" class="site-header"></header>
+
+<nav class="breadcrumb" aria-label="브레드크럼">
+  <ol>
+    <li><a href="../">홈</a></li>
+    <li aria-current="page">오늘의 시</li>
+  </ol>
+</nav>
+
+<main id="main">
+<div class="category-hero">
+  <div class="container" style="max-width:var(--content-width)">
+    <h1>오늘의 시</h1>
+    <p>바쁜 하루 중 잠시 짧은 시 한 편을 읽어보시라는 마음으로 만든 코너입니다. 저작권 보호기간이 지난 공개서지 작품은 전문을 싣고, 아직 저작권이 살아있는 작품은 시인 소개와 감상으로 대신합니다.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="poem-strip" id="all-poems"></div>
+  </div>
+</section>
+</main>
+
+<footer id="site-footer" class="site-footer"></footer>
+
+<script>window.SITE_BASE = "../";</script>
+<script src="../data/site.config.js"></script>
+<script src="../data/categories.js"></script>
+<script src="../data/posts.js"></script>
+<script src="../data/columns.js"></script>
+<script src="../data/poems.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/render.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.ChungdongRender.renderInto("all-poems", window.ChungdongRender.latestPoems(20), window.ChungdongRender.poemCardHTML);
+  });
+</script>
+</body>
+</html>

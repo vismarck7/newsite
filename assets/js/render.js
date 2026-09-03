@@ -6,6 +6,7 @@
   var POSTS = window.POSTS || [];
   var COLUMNS = window.COLUMNS || [];
   var CATEGORIES = window.CATEGORIES || [];
+  var POEMS = window.POEMS || [];
 
   function byModifiedDesc(a, b) {
     return new Date(b.modified) - new Date(a.modified);
@@ -62,6 +63,27 @@
     );
   }
 
+  function poemCardHTML(poem) {
+    return (
+      '<article class="poem-card">' +
+      '<span class="poem-card__mark" aria-hidden="true">❝</span>' +
+      '<h3><a href="' +
+      window.Chungdong.url("poems/" + poem.slug + "/") +
+      '">' +
+      poem.title +
+      "</a></h3>" +
+      '<span class="poet">' +
+      poem.poet +
+      " · " +
+      poem.poetYears +
+      "</span>" +
+      "<p>" +
+      poem.excerpt +
+      "</p>" +
+      "</article>"
+    );
+  }
+
   function categoryCardHTML(cat) {
     return (
       '<a class="category-card" href="' +
@@ -108,9 +130,20 @@
     latestColumns: function (n) {
       return COLUMNS.slice().sort(byModifiedDesc).slice(0, n || 3);
     },
+    latestPoems: function (n) {
+      return POEMS.slice().sort(byModifiedDesc).slice(0, n || 6);
+    },
+    relatedPoems: function (slug, n) {
+      return POEMS.filter(function (p) {
+        return p.slug !== slug;
+      })
+        .sort(byModifiedDesc)
+        .slice(0, n || 3);
+    },
     postCardHTML: postCardHTML,
     columnCardHTML: columnCardHTML,
     categoryCardHTML: categoryCardHTML,
+    poemCardHTML: poemCardHTML,
     renderInto: function (mountId, items, htmlFn, emptyMsg) {
       var mount = document.getElementById(mountId);
       if (!mount) return;
